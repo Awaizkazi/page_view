@@ -75,7 +75,10 @@ class _onBoardingScreenState extends State<onBoardingScreen> {
                               duration: Duration(milliseconds: 500),
                               curve: Curves.easeIn);
                         },
-                        child: Text('Next'),
+                        child: Text(
+                          'Next',
+                          style: TextStyle(color: Colors.blue),
+                        ),
                       ),
               ],
             ),
