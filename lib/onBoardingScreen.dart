@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:page_view/intro_screens/iintro_page_3.dart';
 import 'package:page_view/intro_screens/intro_page_1.dart';
 import 'package:page_view/intro_screens/intro_page_2.dart';
+import 'package:page_view/signUpPage.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import 'home_page.dart';
@@ -75,7 +76,7 @@ class _onBoardingScreenState extends State<onBoardingScreen> {
                             context,
                             MaterialPageRoute(
                               builder: (context) {
-                                return HomePage();
+                                return SignUpPage();
                               },
                             ),
                           );
