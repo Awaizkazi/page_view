@@ -31,8 +31,31 @@ class _onBoardingScreenState extends State<onBoardingScreen> {
           ),
           // Dot indicator
           Container(
+            padding: EdgeInsets.all(10.5),
             alignment: const Alignment(0, 0.9),
-            child: SmoothPageIndicator(controller: _controller, count: 3),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                // Skip
+                GestureDetector(
+                  onTap: () {
+                    _controller.jumpToPage(3);
+                  },
+                  child: Text('Skip'),
+                ),
+                // Dot indicator
+                SmoothPageIndicator(controller: _controller, count: 3),
+                // Next or Done
+                GestureDetector(
+                  onTap: () {
+                    _controller.nextPage(
+                        duration: Duration(milliseconds: 500),
+                        curve: Curves.easeIn);
+                  },
+                  child: Text('Next'),
+                )
+              ],
+            ),
           ),
         ],
       ),

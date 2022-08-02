@@ -7,6 +7,7 @@ class IntroPage3 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
+      child: Image.network('src'),
     );
   }
 }
