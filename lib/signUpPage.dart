@@ -19,9 +19,6 @@ class _SignUpPageState extends State<SignUpPage> {
             child: Column(
               children: [
                 Image.asset('assets/SignUp.png'),
-                SizedBox(
-                  height: 10,
-                ),
                 Text(
                   'Sign Up',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),
@@ -29,6 +26,21 @@ class _SignUpPageState extends State<SignUpPage> {
                 SizedBox(height: 16),
                 Text(
                   'Enter Your Phone Number to Proceed',
+                ),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+                  child: TextFormField(
+                    keyboardType: TextInputType.phone,
+                    // TextInputType.numberWithOptions(decimal: true),
+                    decoration: InputDecoration(
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(8),
+                      ),
+
+                      // hintText: 'Enter a search term',
+                      label: Text('Enter your 10 digit Mobile number'),
+                    ),
+                  ),
                 ),
               ],
             ),
