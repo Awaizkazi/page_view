@@ -52,8 +52,21 @@ class _onBoardingScreenState extends State<onBoardingScreen> {
                   },
                   child: Text('Skip'),
                 ),
+                // SmoothPageIndicator(controller: _controller, count: 3),
                 // Dot indicator
-                SmoothPageIndicator(controller: _controller, count: 3),
+
+                SmoothPageIndicator(
+                  controller: _controller,
+                  count: 3,
+                  effect: SlideEffect(
+                    spacing: 8,
+                    radius: 10,
+                    dotWidth: 10,
+                    dotHeight: 10,
+                    activeDotColor: Colors.blueAccent,
+                  ),
+                ),
+
                 // Next or Done
                 onLastPage
                     ? GestureDetector(

@@ -12,6 +12,7 @@ class IntroPage1 extends StatelessWidget {
         color: Colors.white,
         child: Column(
           children: [
+            Padding(padding: EdgeInsets.only(top: 30)),
             Image.asset(
               'assets/GoodService.png',
               fit: BoxFit.fill,
@@ -22,6 +23,13 @@ class IntroPage1 extends StatelessWidget {
             Text(
               'Good & Service',
               style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              'We Give The Good & Safe \n         \t       Service.',
+              style: TextStyle(fontSize: 15),
             ),
           ],
         ),
